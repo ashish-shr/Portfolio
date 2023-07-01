@@ -1,4 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --first-color: #0080e2;
+  --black-color: #002d62;
+  --white-color: #fff;
+}
 
 * {
   box-sizing: border-box;
@@ -29,6 +35,11 @@ nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
 
 nav ul li {
@@ -39,7 +50,7 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   color: #e6edf3;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: bold;
 }
 
@@ -64,7 +75,8 @@ section h2 {
   margin-bottom: 20px;
   background-color: #0d1117;
   padding: 20px;
-  border-radius: 8px;
+  border: 1px solid rgb(75, 75, 75);
+  border-radius: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -124,15 +136,21 @@ Skills section progress bars #skills .skill {
 }
 
 #skills .progress-bar {
-  height: 10px;
+  width: auto;
+  height: 20px;
   background-color: #ddd;
-  border-radius: 4px;
+  border: none;
+  border-radius: 10px;
   position: relative;
   overflow: hidden;
 }
 
 #skills .progress-bar {
-  background-color: #3cb371;
+  background-image: linear-gradient(
+    to right,
+    var(--black-color),
+    var(--first-color)
+  );
   animation: progressAnimation 2s ease-in-out forwards;
 }
 
@@ -148,15 +166,17 @@ Skills section progress bars #skills .skill {
 
 /* Style for progress label */
 #skills .progress-label {
+  width: 45px;
   position: absolute;
   top: 0;
   right: 0;
-  padding: 0 8px;
+  margin: 0px;
+  padding: 5px;
   line-height: 10px;
   background-color: #010409;
   color: #e6edf3;
   font-size: 12px;
-  border-radius: 4px;
+  border-radius: 10px;
 }
 
 #projects a {
@@ -165,25 +185,21 @@ Skills section progress bars #skills .skill {
   background-color: #229255;
   color: #e6edf3;
   text-decoration: none;
-  border-radius: 4px;
+  border-radius: 10px;
   margin-top: 10px;
   transition: background-color 0.3s ease-in-out;
-}
-
-#projects a:hover {
-  background-color: #3cb371;
 }
 
 nav ul li a {
   text-decoration: none;
   color: #e6edf3;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
   transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-  color: #3cb371;
+  color: #4fb3ff;
 }
 
 footer p {
@@ -260,6 +276,43 @@ body.scrollable {
   width: 400px;
 }
 
+.project_btn {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  background-image: linear-gradient(
+    to right,
+    var(--black-color),
+    var(--first-color)
+  );
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  color: white;
+  text-decoration: none;
+  overflow: hidden;
+  z-index: 1; /* Add a higher z-index to keep the text above the overlay */
+}
+
+.project_btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--first-color);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: -1; /* Set a lower z-index to position the overlay below the text */
+}
+
+.project_btn:hover::before {
+  opacity: 1;
+}
+
+.project_btn:hover {
+  color: white; /* Change text color back to white on hover */
+}
+
 /* Styles for the "Go to Top" button */
 #goToTopContainer {
   display: flex;
@@ -271,15 +324,15 @@ body.scrollable {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: #229255;
+  background-color: var(--first-color);
   color: #e6edf3;
-  border: none;
+  border: 1px solid rgb(75, 75, 75);
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
 }
 
 #goToTop:hover {
-  background-color: #3cb371;
+  background-color: #289ffa;
   color: #fff;
 }
 
