@@ -35,6 +35,6 @@ I'm always looking for ways to improve my portfolio website. If you have any sug
 
 ## 🔗Contact
 
-If you'd like to connect with me or explore potential opportunities, feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/ashish-shr).
+If you'd like to connect with me or explore potential opportunities, feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/ashishshrestha).
 
 Thank you for visiting my portfolio website repository!
