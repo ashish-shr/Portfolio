@@ -1,0 +1,86 @@
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+  header h1 {
+    font-size: 175%;
+  }
+
+  #about img {
+    height: 150px;
+    width: 150px;
+  }
+
+  .project,
+  #about .content,
+  #skills .content {
+    padding: 10px;
+  }
+
+  #imgMall {
+    max-width: 150px;
+    height: 96px;
+  }
+
+  #imgLeaf {
+    max-width: 150px;
+    height: 96px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  #projects .content .project {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  header h1 {
+    font-size: 175%;
+  }
+
+  #home img {
+    height: 250px;
+    width: 250px;
+  }
+  #about img {
+    height: 120px;
+    width: 120px;
+  }
+
+  .project,
+  #about .content,
+  #skills .content {
+    padding: 8px;
+  }
+
+  #imgMall {
+    max-width: 120px;
+    height: 76px;
+  }
+
+  #imgLeaf {
+    max-width: 120px;
+    height: 76px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+}
