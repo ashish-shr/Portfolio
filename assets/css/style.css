@@ -8,6 +8,7 @@
 
 * {
   box-sizing: border-box;
+  user-select: none;
 }
 
 html {
@@ -195,10 +196,12 @@ nav ul li a {
   color: #e6edf3;
   font-size: 18px;
   font-weight: bold;
-  transition: color 0.3s ease;
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
 }
 
 nav ul li a:hover {
+  transform: translateY(-3px);
   color: #4fb3ff;
 }
 
@@ -266,12 +269,17 @@ body.scrollable {
   flex-wrap: wrap;
 }
 
+#profile-pic {
+  border: 1px solid #4b4b4b;
+  border-radius: 50%;
+}
+
 .content .skill {
   padding: 10px;
 }
 
 #projects .content .project {
-  margin: 10px;
+  margin: 5px;
   padding: 25px;
   width: 400px;
 }
@@ -313,6 +321,15 @@ body.scrollable {
   color: white; /* Change text color back to white on hover */
 }
 
+footer a img {
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
+}
+
+footer a:hover img {
+  transform: translateY(-3px);
+}
+
 /* Styles for the "Go to Top" button */
 #goToTopContainer {
   display: flex;
@@ -326,7 +343,7 @@ body.scrollable {
   border-radius: 50%;
   background-color: var(--first-color);
   color: #e6edf3;
-  border: 1px solid rgb(75, 75, 75);
+  border: none;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
 }
