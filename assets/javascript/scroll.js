@@ -17,7 +17,7 @@ function handleIntersection(entries, observer) {
 const observer = new IntersectionObserver(handleIntersection, {
   root: null,
   rootMargin: "0px",
-  threshold: 0.2, // Adjust the threshold as needed
+  threshold: 0.2,
 });
 
 // Get all elements with the class 'card-animate'
